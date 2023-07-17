@@ -1,0 +1,33 @@
+@use '/src/styles/breakpoints.scss';
+@use '/src/styles/media-query.scss';
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin: 0 20px;
+  max-width: 400px;
+  width: 100%;
+
+  @include media-query.media($from: breakpoints.$sm) {
+    margin: 0 10px;
+  }
+
+  @include media-query.media($from: breakpoints.$md) {
+    max-width: 600px;
+  }
+
+  @include media-query.media($from: breakpoints.$lg) {
+    max-width: 700px;
+  }
+
+  @include media-query.media($from: breakpoints.$xl) {
+    max-width: 900px;
+  }
+
+  @include media-query.media($from: breakpoints.$xxl) {
+    max-width: 1100px;
+  }
+}

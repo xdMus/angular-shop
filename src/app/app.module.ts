@@ -16,7 +16,7 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
   declarations: [AppComponent, HomeComponent, NavigationComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([{ path: '/', component: HomeComponent }]),
+    RouterModule.forRoot([{ path: '', component: HomeComponent }]),
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
