@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="'navigation'" mode="over">
+    <mat-toolbar class="">
+      <span>Menu</span>
+      <mat-icon (click)="drawer.toggle()" class="close-icon mat">close</mat-icon>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">PRODUCTS</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isXSmall$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a href="/">pet-shop</a>
+      <ul class="nav-list" *ngIf="(isXSmall$ | async) === false">
+        <li>
+          <a href="/products">PRODUCTS</a>
+        </li>
+      </ul>
+      <div class="flex-spacer"></div>
+      <a class="cart-icon" href="/cart"
+        ><mat-icon aria-label="Side nav toggle icon">shopping_basket</mat-icon></a
+      >
+      <button mat-stroked-button class="sign-in-button">SIGN IN</button>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
