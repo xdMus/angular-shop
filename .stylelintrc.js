@@ -4,6 +4,9 @@ module.exports = {
     'stylelint-config-sass-guidelines',
     'stylelint-prettier/recommended',
   ],
-  rules: {},
+  rules: {
+    'prettier/prettier': true,
+  },
+  plugins: ['stylelint-prettier'],
   defaultSeverity: 'warning',
 };
